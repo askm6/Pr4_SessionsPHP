@@ -65,7 +65,7 @@
     if (isset($_POST['update'])) {
       $alreadyExist = false;
       foreach ($_SESSION['list'] as $index => $item) {
-        if ($item['name'] == $_POST['name']) {
+        if ($item['name'] == $_POST['name']&& $index!=$_POST['index']) {
           $alreadyExist = true;
         }
       }
